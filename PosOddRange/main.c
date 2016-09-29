@@ -7,9 +7,26 @@
 //
 
 #include <stdio.h>
+#include <limits.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+int main() {
+    
+    int min = INT_MAX, max = INT_MIN;
+    int number = 0;
+    
+    while(1) {
+        scanf("%d", &number);
+        if( isBreak(number) ) {
+            break;
+        }
+    }
+    return 0;
+}
+
+int isBreak(int number) {
+    if( number <= 0){
+        return 1;
+    }
+    
     return 0;
 }
