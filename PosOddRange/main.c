@@ -19,12 +19,46 @@ int main() {
         if( isBreak(number) ) {
             break;
         }
+        
+        if( DivideTwo(number) ){
+            if( isMin(number) ) {
+                min = number;
+            }else if ( isMax(number) ){
+                max = number;
+            }
+        }
     }
+    
+    printf("%d %d %d\n", max, min, max - min);
     return 0;
 }
 
 int isBreak(int number) {
     if( number <= 0){
+        return 1;
+    }
+    
+    return 0;
+}
+
+int DivideTwo(int number) {
+    if( number % 2 == 0) {
+        return 1;
+    }
+    
+    return 0;
+}
+
+int isMin(int number) {
+    if( number < min) {
+        return 1;
+    }
+    
+    return 0;
+}
+
+int isMax(int number) {
+    if( number > max ) {
         return 1;
     }
     
